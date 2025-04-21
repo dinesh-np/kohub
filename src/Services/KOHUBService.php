@@ -132,10 +132,10 @@ class KOHUBService
         return $response;
     }
 
-    public function sendRequest(string $url, string $payload = '{}', string $method = 'POST', ?array $customHeaders = null): string
+    public function sendRequest(string $url, string $payload = '{}', string $method = 'POST', ?array $customHeaders = []): string
     {
         $attempt = 1;
-        $headers = $customHeaders ?? $this->headers;
+        $headers = array_merge($this->headers, $customHeaders);
 
         do {
             $ch = curl_init($url);
@@ -143,7 +143,7 @@ class KOHUBService
             curl_setopt_array($ch, [
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_CUSTOMREQUEST  => strtoupper($method),
-                CURLOPT_HTTPHEADER     => $headers,
+                CURLOPT_HTTPHEADER     => $this->formatCurlHeaders($headers),
                 CURLOPT_TIMEOUT        => $this->curlTimeOut,
             ]);
 
@@ -258,4 +258,16 @@ class KOHUBService
             if (file_exists($output)) unlink($output);
         }
     }
+
+    protected function formatCurlHeaders(array $headers): array
+    {
+        $formatted = [];
+
+        foreach ($headers as $key => $value) {
+            $formatted[] = "$key: $value";
+        }
+
+        return $formatted;
+    }
+
 }
