@@ -17,7 +17,7 @@ class SimpleFileLogger implements LoggerInterface
         $this->file = $file;
     }
 
-    public function log($level, $message, array $context = [])
+    public function log($level, $message, array $context = []): void
     {
         $entry = '[' . strtoupper($level) . '] ' . $message;
 
