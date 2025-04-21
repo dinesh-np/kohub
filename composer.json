@@ -1,0 +1,21 @@
+{
+  "name": "dinesh-np/kohub",
+  "autoload": {
+    "psr-4": {
+      "DP0\\Kohub\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Dinesh phuyel",
+      "email": "dineshsm905@gmail.com"
+    }
+  ],
+  "require": {
+    "ext-imagick": "*",
+    "psr/log": "^3.0",
+    "ext-fileinfo": "*"
+  },
+  "minimum-stability": "dev",
+  "version": "1.0.0"
+}
