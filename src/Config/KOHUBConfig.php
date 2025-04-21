@@ -77,67 +77,67 @@ abstract class KOHUBConfig implements KOHUBConfigContract
 
     public function getEntryFromUrl(): string
     {
-        return $this->getUrlWithSlug() . APIListEnum::GET_ENTRY_FORM->value;
+        return $this->getUrlWithSlug() . APIListEnum::GET_ENTRY_FORM;
     }
 
     public function getPostEntryFormUrl(): string
     {
-        return $this->getUrlWithSlug() . APIListEnum::POST_ENTRY_FORM->value;
+        return $this->getUrlWithSlug() . APIListEnum::POST_ENTRY_FORM;
     }
 
     public function getSubmitVerificationCodeUrl(): string
     {
-        return $this->getUrlWithSlug() . APIListEnum::SUBMIT_VERIFICATION_CODE->value;
+        return $this->getUrlWithSlug() . APIListEnum::SUBMIT_VERIFICATION_CODE;
     }
 
     public function getProfileFormUrl(): string
     {
-        return $this->getUrlWithSlug() . APIListEnum::GET_PROFILE_FORM->value;
+        return $this->getUrlWithSlug() . APIListEnum::GET_PROFILE_FORM;
     }
 
     public function getPostProfileFormUrl(): string
     {
-        return $this->getUrlWithSlug() . APIListEnum::POST_PROFILE_FORM->value;
+        return $this->getUrlWithSlug() . APIListEnum::POST_PROFILE_FORM;
     }
 
     public function getCreateEntrantFormUrl(): string
     {
-        return $this->getUrlWithSlug() . APIListEnum::GET_CREATE_ENTRANT_FORM->value;
+        return $this->getUrlWithSlug() . APIListEnum::GET_CREATE_ENTRANT_FORM;
     }
 
     public function getPostCreateEntrantFormUrl(): string
     {
-        return $this->getUrlWithSlug() . APIListEnum::POST_CREATE_ENTRANT_FORM->value;
+        return $this->getUrlWithSlug() . APIListEnum::POST_CREATE_ENTRANT_FORM;
     }
 
     public function getCheckEntryCountUrl(): string
     {
-        return $this->getUrlWithSlug() . APIListEnum::CHECEK_ENTRY_COUNT->value;
+        return $this->getUrlWithSlug() . APIListEnum::CHECEK_ENTRY_COUNT;
     }
 
     public function getEntryFormSuccessUrl(): string
     {
-        return $this->getUrlWithSlug() . APIListEnum::GET_ENTRY_FORM_SUCCESS->value;
+        return $this->getUrlWithSlug() . APIListEnum::GET_ENTRY_FORM_SUCCESS;
     }
 
     public function getResendMobileVerificationUrl(): string
     {
-        return $this->getUrlWithSlug() . APIListEnum::RESEND_MOBILE_VERIFICATION->value;
+        return $this->getUrlWithSlug() . APIListEnum::RESEND_MOBILE_VERIFICATION;
     }
 
     public function getCheckEntrantUrl(): string
     {
-        return $this->getUrlWithSlug() . APIListEnum::CHECK_ENTRANT->value;
+        return $this->getUrlWithSlug() . APIListEnum::CHECK_ENTRANT;
     }
 
     public function getUpdateEntrantMarketingChoiceUrl(): string
     {
-        return $this->getUrlWithSlug() . APIListEnum::UPDATE_ENTRANT_MARKETING_CHOICE->value;
+        return $this->getUrlWithSlug() . APIListEnum::UPDATE_ENTRANT_MARKETING_CHOICE;
     }
 
     public function getSignedUrlForReceiptUpload(): string
     {
-        return $this->getUrlWithSlug() . APIListEnum::GET_SIGNED_URL_FOR_RECIPT_UPLOAD->value;
+        return $this->getUrlWithSlug() . APIListEnum::GET_SIGNED_URL_FOR_RECIPT_UPLOAD;
     }
     public function getReceiptUploadFileSizeLimit(): int
     {
